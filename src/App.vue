@@ -8,6 +8,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Navigator from './components/Navigator.vue'
 
 export default {
   name: 'App',
