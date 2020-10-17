@@ -1,11 +1,11 @@
 <template>
   <v-container>
-    <v-app-bar clipped-left>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+    <v-app-bar clipped-left dark color="deep-purple">
+      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-toolbar-title>桃按钮</v-toolbar-title>
     </v-app-bar>
-    <v-navigation-drawer>
-      <v-list>
+    <v-navigation-drawer absolute v-model="drawer">
+      <v-list nav dense>
         <v-list-item-group>
           <v-list-item>
             <v-list-item-icon>
@@ -34,9 +34,12 @@
 </template>
 
 <script>
-export default {
-  name: "Navigator",
-};
+  export default {
+    name: "Navigator",
+    data: () => ({
+      drawer: false,
+    }),
+  };
 </script>
 
 <style>

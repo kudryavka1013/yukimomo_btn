@@ -1,8 +1,8 @@
 <template>
-<v-container>
-  <v-button> HOME </v-button>
+<div>
+  <v-btn small> HOME </v-btn>
   <v-img src="../assets/logopeach.jpg"></v-img>
-</v-container>
+</div>
   
 </template>
 
