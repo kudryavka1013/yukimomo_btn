@@ -1,7 +1,7 @@
 <template>
 <div>
   <v-btn small> HOME </v-btn>
-  <v-img src="../assets/logopeach.jpg"></v-img>
+  <v-img src="../assets/logopeach.jpg" max-width="500" max-height="500"></v-img>
 </div>
   
 </template>
