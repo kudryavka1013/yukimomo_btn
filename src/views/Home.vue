@@ -1,5 +1,9 @@
 <template>
+<v-container>
   <v-button> HOME </v-button>
+  <v-img src="../assets/logopeach.jpg"></v-img>
+</v-container>
+  
 </template>
 
 <script>
