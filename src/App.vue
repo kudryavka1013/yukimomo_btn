@@ -2,7 +2,7 @@
   <v-app>
     <v-navigation-drawer v-model="drawer" app color="cyan lighten-5">
       <v-list dense nav>
-        <v-subheader >这里是导航，妙啊！</v-subheader>
+        <v-subheader>这里是导航，妙啊！</v-subheader>
         <v-list-item-group mandatory>
           <v-list-item color="cyan">
             <v-list-item-icon>
@@ -35,18 +35,20 @@
     <v-main>
       <!-- <router-view></router-view> -->
       <Home />
+      <bilibili></bilibili>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Home from "./views/Home"
-// import bilibili from "./views/bilibili"
+import Home from "./views/Home";
+import bilibili from "./views/bilibili";
 export default {
   name: "App",
 
   components: {
     Home,
+    bilibili,
   },
 
   data: () => ({

@@ -1,5 +1,5 @@
 <template>
-  <a rel="https://www.bilibili.com">好起来了</a>
+  <a href="https://www.bilibili.com">好起来了</a>
 </template>
 
 <script>
