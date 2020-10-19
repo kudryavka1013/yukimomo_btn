@@ -4,21 +4,22 @@
       <v-list dense nav>
         <v-subheader>这里是导航，妙啊！</v-subheader>
         <v-list-item-group mandatory>
-          <v-list-item color="cyan">
+          
+          <v-list-item color="cyan" :to="{name:'home'}">
             <v-list-item-icon>
               <v-icon>mdi-home</v-icon>
             </v-list-item-icon>
             <v-list-item-title>主页</v-list-item-title>
           </v-list-item>
 
-          <v-list-item color="cyan">
+          <v-list-item color="cyan" :to="{name:'bilibili'}">
             <v-list-item-icon>
               <v-icon>mdi-web</v-icon>
             </v-list-item-icon>
             <v-list-item-title>哔哩哔哩</v-list-item-title>
           </v-list-item>
 
-          <v-list-item color="cyan">
+          <v-list-item color="cyan" :to="{name:'about'}">
             <v-list-item-icon>
               <v-icon>mdi-code-tags</v-icon>
             </v-list-item-icon>
@@ -33,22 +34,20 @@
       <v-toolbar-title>桃按钮 🍑</v-toolbar-title>
     </v-app-bar>
     <v-main>
-      <!-- <router-view></router-view> -->
-      <Home />
+      <transition>
+        <router-view></router-view>
+      </transition>
       <bilibili></bilibili>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Home from "./views/Home";
-import bilibili from "./views/bilibili";
 export default {
   name: "App",
 
   components: {
-    Home,
-    bilibili,
+
   },
 
   data: () => ({
