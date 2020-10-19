@@ -3,7 +3,7 @@
     <div>Home</div>
     <v-card width="200">
       <v-img
-        src="../assets/logopeach.jpg"
+        src="../assets/peach.jpg"
         max-width="200"
         max-height="200"
       ></v-img>
