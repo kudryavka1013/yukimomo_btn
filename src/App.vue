@@ -49,11 +49,13 @@
       </v-tooltip>
     </v-app-bar>
     <v-main>
-      <transition>
+      <!-- 过渡动画，先滑出旧元素再滑入新元素，原本会有旧元素占位的bug -->
+      <v-slide-x-transition mode="out-in" appear>
         <!-- 主页面 -->
-        <router-view></router-view>
-      </transition>
-
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
+      </v-slide-x-transition>
       <!-- 返回顶部按钮 -->
       <v-tooltip top>
         <template v-slot:activator="{ on }">
@@ -76,6 +78,9 @@
         <span>回到顶部</span>
       </v-tooltip>
     </v-main>
+    <v-footer>
+      
+    </v-footer>
   </v-app>
 </template>
 
