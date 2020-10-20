@@ -1,37 +1,21 @@
 <template>
-  <div>
-    <div>Home</div>
-    <v-card width="200">
-      <v-img src="../assets/peach.jpg" max-width="200"></v-img>
-      <div>这东西怎么写啊</div>
-    </v-card>
-    <v-card width="200">
-      <v-img src="../assets/peach.jpg" max-width="200"></v-img>
-      <div>这东西怎么写啊</div>
-    </v-card>
-    <v-card width="200">
-      <v-img src="../assets/peach.jpg" max-width="200"></v-img>
-      <div>这东西怎么写啊</div>
-    </v-card>
-    <v-card width="200">
-      <v-img src="../assets/peach.jpg" max-width="200"></v-img>
-      <div>这东西怎么写啊</div>
-    </v-card>
-    <v-card width="200">
-      <v-img src="../assets/peach.jpg" max-width="200"></v-img>
-      <div>这东西怎么写啊</div>
-    </v-card>
-    <v-card width="200">
-      <v-img src="../assets/peach.jpg" max-width="200"></v-img>
-      <div>这东西怎么写啊</div>
-    </v-card>
+  <div class="ma-3">
+    <introduction />
+    <div class="mt-3">
+      <voicebtn />
+    </div>
   </div>
 </template>
 
 <script>
+import introduction from "../components/introduction";
+import voicebtn from "../components/voicebtn";
 export default {
   name: "Home",
-  
+  components: {
+    introduction,
+    voicebtn,
+  },
 };
 </script>
 

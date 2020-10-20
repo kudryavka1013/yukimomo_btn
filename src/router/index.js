@@ -2,7 +2,7 @@ import VueRouter from 'vue-router'
 
 import Home from '../views/Home'
 import About from '../views/About'
-import bilibili from '../views/bilibili'
+import Bilibili from '../views/Bilibili'
 const routes = [{
         name:'home',
         path: '/home',
@@ -10,7 +10,7 @@ const routes = [{
     }, {
         name:'bilibili',
         path: '/bilibili',
-        component: bilibili
+        component: Bilibili
     },
     {
         name:'about',
