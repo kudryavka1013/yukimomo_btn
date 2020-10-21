@@ -1,5 +1,5 @@
 <template>
-  <div>{{ data }}</div>
+  <div>阿桃粉丝数：{{ data }}</div>
 </template>
 
 <script>
@@ -9,13 +9,13 @@ export default {
   methods: {},
   mounted() {
     // .get("https://api.bilibili.com/x/relation/stat?vmid=451793")
-  //   this.$axios({
-  //     baseURL:"/api",
-  //     url: "https://api.bilibili.com/x/web-interface/card",
-  //     method: "get",
-  //     params: { vmid: 451793 },
-  //   }).then((response) => (this.data = response));
-  //   console.log(this.data);
+    this.$axios({
+      baseURL:"/api",
+      url: "https://bird.ioliu.cn/v1?url=https://api.bilibili.com/x/relation/stat",
+      method: "get",
+      params: { vmid: 451793 },
+    }).then((response) => (this.data = response.data.data.follower));
+    
   },
 }
 </script>
