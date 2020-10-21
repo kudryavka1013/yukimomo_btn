@@ -28,6 +28,7 @@
 export default {
   name: "introduction",
 };
+
 </script>
 
 <style>
