@@ -16,6 +16,7 @@ export default {
     this.getLiveRoomInfo();
   },
   methods: {
+    // 获取粉丝数
     getFollower() {
       // .get("https://api.bilibili.com/x/relation/stat?vmid=451793")
       this.$axios({
@@ -30,6 +31,7 @@ export default {
         )
       );
     },
+    // 获取直播间信息
     getLiveRoomInfo() {
       // .get("https://api.live.bilibili.com/room/v1/Room/getRoomInfoOld?mid=451793")
       this.$axios({
