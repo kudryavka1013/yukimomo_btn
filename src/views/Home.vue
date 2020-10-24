@@ -1,9 +1,26 @@
 <template>
   <div class="ma-3">
     <introduction />
-    <div class="mt-3">
-      <voicebtn />
-    </div>
+    <v-alert
+      class="mt-3"
+      dense
+      rounded="lg"
+      tran
+      transition="scroll-x-transition"
+      border="left"
+      colored-border
+      type="info"
+      color="primary"
+      elevation="2"
+      dismissible
+    >
+      音量注意！
+    </v-alert>
+    <v-card class="mt-3" rounded="lg">
+      <v-card-text>
+        <voicebtn />
+      </v-card-text>
+    </v-card>
   </div>
 </template>
 

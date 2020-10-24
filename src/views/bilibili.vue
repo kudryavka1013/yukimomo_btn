@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <a href="https://space.bilibili.com/451793/" target="_blank">好起来了</a>
+  <div class="ma-3">
    <getInfo/>
   </div>
 </template>
