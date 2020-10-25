@@ -1,11 +1,11 @@
 <template>
   <!-- 音声按钮 -->
-  <v-btn rounded color="cyan lighten-3" @click="playtest" dark>妙啊</v-btn>
+  <v-btn rounded color="cyan lighten-3" @click="playtest" dark>{{ voiceName }}</v-btn>
 </template>
 
 <script>
 export default {
-  name: "voicebtn",
+  name: "voiceButton",
   methods: {
     playtest() {
       const audio = new Audio();
@@ -15,6 +15,7 @@ export default {
       audio.play();
     },
   },
+  props:['voiceName','path','tag'],
 };
 </script>
 
