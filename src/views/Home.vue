@@ -14,9 +14,38 @@
       elevation="2"
       dismissible
     >
-      音量注意！耳膜破损等后果概不负责！
+      音量注意！由于点击按钮引发的包括耳膜破损在内的各种后果本站概不负责！
     </v-alert>
-
+    <v-alert
+      class="mt-3"
+      dense
+      rounded="lg"
+      tran
+      transition="scroll-x-transition"
+      border="left"
+      colored-border
+      type="info"
+      color="primary"
+      elevation="2"
+      dismissible
+    >
+      请不要疯狂点击，由于还没做好，可能会出现各种奇怪的问题
+    </v-alert>
+    <v-alert
+      class="mt-3"
+      dense
+      rounded="lg"
+      tran
+      transition="scroll-x-transition"
+      border="left"
+      colored-border
+      type="info"
+      color="primary"
+      elevation="2"
+      dismissible
+    >
+    手机端适配尚未完成，最好用电脑网页打开
+    </v-alert>
     <v-row>
       <v-col v-for="item in voicesGroup" :key="item.tag" cols="12">
         <voice-card rounded="lg" :title="item.tag">
