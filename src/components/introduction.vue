@@ -5,7 +5,7 @@
       <v-col cols="auto">
         <v-avatar class="ma-3" width="200" height="auto" tile>
           <v-img src="../assets/peach.jpg" max-width="200">
-            <!-- 图片骨架 -->
+            <!-- 图片骨架 怎么有bug
             <template v-slot:placeholder>
               <v-sheet>
                 <v-skeleton-loader
@@ -14,7 +14,7 @@
                   transition="scale-transition"
                 />
               </v-sheet>
-            </template>
+            </template> -->
           </v-img>
         </v-avatar>
       </v-col>

@@ -22,6 +22,16 @@ const voicesInfo = [{
         voiceName:'Niiiiiiice！还有谁？我就问你，还有谁？',
         path:'Niiiiiiice！还有谁？我就问你，还有谁？.mp3',
         tag:'不知道怎么分类了'
+    },
+    {
+        voiceName:'Brave Song',
+        path:'Brave Song.mp3',
+        tag:'灭人器（谨慎使用，目前无法停止）'
+    },
+    {
+        voiceName:'不给糖就捣蛋！',
+        path:'不给糖就捣蛋！.mp3',
+        tag:'特供'
     }
 ]
 
