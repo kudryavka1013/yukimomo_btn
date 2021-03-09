@@ -1,5 +1,5 @@
 {
-  "envId": "yukimomo-button-18bd53",
+  "envId": "yukimomo-btn-7gj9dtqs24d44671",
   "version": "2.0",
   "$schema": "https://framework-1258016615.tcloudbaseapp.com/schema/latest.json",
   "functionRoot": "./functions",
@@ -15,5 +15,6 @@
         }
       }
     }
-  }
+  },
+  "region": "ap-shanghai"
 }
