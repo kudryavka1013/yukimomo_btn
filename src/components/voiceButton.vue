@@ -27,8 +27,7 @@ export default {
       this.$audio.preload = "metadata";
       console.log(this.$audio)
       this.$audio.load();
-      audio.oncanplay = function () {
-        
+      this.$audio.oncanplay = function () {
       };
       this.$audio.play()
     }

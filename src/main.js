@@ -10,7 +10,7 @@ Vue.use(VueRouter)
 Vue.use(Vuex)
 Vue.config.productionTip = false
 
-const audio =new Audio()
+const audio = new Audio()
 Vue.prototype.$audio = audio
 
 const store = new Vuex.Store({
