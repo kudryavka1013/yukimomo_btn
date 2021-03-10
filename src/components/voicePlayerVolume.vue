@@ -55,7 +55,7 @@ export default {
   float: left;
 }
 .progress-bar {
-  width: 120px;
+  width: 100px;
   display: inline;
   float: left;
 }

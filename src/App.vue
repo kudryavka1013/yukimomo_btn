@@ -50,7 +50,6 @@ export default {
   data: () => ({
     scroll: 0,
   }),
-
   computed: {
     isShowBackToTop: function () {
       if (this.scroll >= 300) return true;

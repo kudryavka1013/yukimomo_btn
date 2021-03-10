@@ -9,18 +9,29 @@
 export default {
   name: "voiceButton",
   methods: {
-    play() {
-      const audio = new Audio();
+    // play() {
+    //   const audio = new Audio();
+    //   // 此处请务必要require，否则解析成 text/html
+    //   audio.src = require("../../public/voices/" + this.path);
+    //   audio.preload = "metadata";
+    //   audio.load();
+    //   audio.oncanplay = function () {
+    //     console.log(audio.duration);
+    //   };
+    //   console.log(audio);
+    //   audio.play();
+    // },
+    play(){
       // 此处请务必要require，否则解析成 text/html
-      audio.src = require("../../public/voices/" + this.path);
-      audio.preload = "metadata";
-      audio.load();
+      this.$audio.src = require("../../public/voices/" + this.path);
+      this.$audio.preload = "metadata";
+      console.log(this.$audio)
+      this.$audio.load();
       audio.oncanplay = function () {
-        console.log(audio.duration);
+        
       };
-      console.log(audio);
-      audio.play();
-    },
+      this.$audio.play()
+    }
   },
   props: ["voiceName", "path", "tag"],
 };

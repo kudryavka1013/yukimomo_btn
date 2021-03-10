@@ -17,6 +17,7 @@
         />
       </a>
     </div>
+    <span>赣ICP备2021001858号-1</span>
   </v-footer>
 </template>
 
