@@ -2,26 +2,29 @@
   <div class="wrapper" v-show="isPlaying">
     <v-progress-circular
       indeterminate
-      width="1"
+      width="1.5"
       size="20"
       class="me-2"
     ></v-progress-circular>
-    <span class="text">正在播放：{{ content }}</span>
+    <div class="text">
+      <span>正在播放：{{ content }}</span>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "voicePlayerContent",
-  props: ['isPlaying', 'content'],
+  props: ["isPlaying", "content"],
 };
 </script>
 
-<style scope>
-.wrapper{
-    display: inline-block;
+<style>
+.wrapper {
+  display: inline-block;
 }
-.text{
-    text-align: center
+.text {
+  display: inline-block;
+  text-align: center;
 }
 </style>

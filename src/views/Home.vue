@@ -33,7 +33,6 @@
         手机端适配尚未完成，最好用电脑网页打开
       </v-alert>
     </div>
-    <voice-player />
     <div class="ma-3">
       <v-row>
         <v-col v-for="item in voicesGroup" :key="item.tag" cols="12">
@@ -48,6 +47,7 @@
         </v-col>
       </v-row>
     </div>
+    <voice-player class="player"/>
   </div>
 </template>
 
@@ -91,4 +91,7 @@ export default {
 </script>
 
 <style>
+/* .player{
+  position: sticky;
+} */
 </style>

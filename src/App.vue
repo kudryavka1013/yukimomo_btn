@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <layout/>
+    <layout />
     <v-main>
       <!-- 过渡动画，先滑出旧元素再滑入新元素，原本会有旧元素占位的bug -->
       <v-slide-x-transition mode="out-in" appear>
@@ -10,7 +10,7 @@
         </keep-alive>
       </v-slide-x-transition>
       <!-- 返回顶部按钮 -->
-      <v-tooltip top>
+      <v-tooltip top >
         <template v-slot:activator="{ on }">
           <v-fab-transition>
             <v-btn
@@ -30,21 +30,21 @@
         </template>
         <span>回到顶部</span>
       </v-tooltip>
-      <copyrightFooter/>
+
     </v-main>
+    <pageFooter />
   </v-app>
 </template>
 
 <script>
-import layout from './layout/layout'
-import copyrightFooter from "./components/copyrightFooter";
+import layout from "./layout/layout";
+import pageFooter from "./components/pageFooter";
 export default {
   name: "App",
 
   components: {
     layout,
-    copyrightFooter,
-    
+    pageFooter,
   },
 
   data: () => ({

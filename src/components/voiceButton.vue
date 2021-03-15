@@ -21,16 +21,21 @@ export default {
     //   console.log(audio);
     //   audio.play();
     // },
-    play(){
+    play() {
       // 此处请务必要require，否则解析成 text/html
       this.$audio.src = require("../../public/voices/" + this.path);
-      this.$audio.preload = "metadata";
-      console.log(this.$audio)
+      var voiceName = this.path.slice(0,this.path.lastIndexOf("."));
+      console.log(voiceName)
+      // this.$audio.preload = "metadata";
+      console.log(this.$audio);
+      // console.log(this.$audio.preload)
+      console.log(this.$audio.volume)
       this.$audio.load();
-      this.$audio.oncanplay = function () {
-      };
-      this.$audio.play()
-    }
+      this.$audio.oncanplay = function () {};
+      this.$store.commit('toggleIsPlaying',{ isPlaying: true})
+      this.$store.commit('changeContent',{ content: voiceName})
+      this.$audio.play();
+    },
   },
   props: ["voiceName", "path", "tag"],
 };

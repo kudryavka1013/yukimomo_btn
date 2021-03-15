@@ -8,7 +8,6 @@
       hide-details="true"
       v-model="volume"
       @input="updateVolume(volume)"
-      
       min="0"
       max="1"
       step="0.05"
@@ -21,36 +20,41 @@ export default {
   name: "voicePlayerVolume",
   data: () => ({
     volume: 1,
-    mute: false,
+    muted: false,
   }),
   computed: {
     icon: function () {
-      if (this.mute){
-        return "mdi-volume-mute"
+      if (this.muted) {
+        return "mdi-volume-mute";
       }
-      if (this.volume == 0){
+      if (this.volume == 0) {
         return "mdi-volume-low";
-      }else if(this.volume <= 0.5){
-        return "mdi-volume-medium"
-      }else{
-        return "mdi-volume-high"
+      } else if (this.volume <= 0.5) {
+        return "mdi-volume-medium";
+      } else {
+        return "mdi-volume-high";
       }
     },
   },
   methods: {
     updateVolume(volume) {
+      this.$audio.volume = volume;
+      // console.log('volume: ' + this.$audio.volume)
       this.volume = volume;
+      this.$audio.muted = false
+      this.mute = false
     },
     toggleMute() {
-      this.mute = !this.mute
+      this.$audio.muted = !this.$audio.muted;
+      console.log('muted is ' + this.$audio.muted);
+      this.muted = !this.muted;
     },
   },
 };
 </script>
 
-<style scope>
-
-.vol-btn{
+<style>
+.vol-btn {
   display: inline;
   float: left;
 }

@@ -11,16 +11,25 @@ Vue.use(Vuex)
 Vue.config.productionTip = false
 
 const audio = new Audio()
+audio.addEventListener('ended',() => {
+  store.commit('toggleIsPlaying',{ isPlaying: false })
+})
+
 Vue.prototype.$audio = audio
 
 const store = new Vuex.Store({
   state: {
     isPlaying: false,
-    content: ''
+    content: '',
   },
   mutations: {
-    increment (state) {
-      state.count++
+    toggleIsPlaying(state,payload) {
+      console.log('toggleIsPlaying')
+      state.isPlaying = payload.isPlaying
+    },
+    changeContent (state,payload) {
+      console.log('changeContent')
+      state.content = payload.content
     }
   }
 })
