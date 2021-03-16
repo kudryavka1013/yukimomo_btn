@@ -26,7 +26,7 @@
           target="_blank"
         >
           <img
-            src="https://badgen.net/github/release/kudryavka1013/yukimomo_btn?color=cyan"
+            src="https://badgen.net/github/release/kudryavka1013/yukimomo_btn/stable?color=cyan"
           />
           <img
             src="https://badgen.net/github/watchers/kudryavka1013/yukimomo_btn?color=cyan"

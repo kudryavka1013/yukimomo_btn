@@ -11,12 +11,13 @@ Vue.use(Vuex)
 Vue.config.productionTip = false
 
 const audio = new Audio()
+//监听播放完成事件
 audio.addEventListener('ended',() => {
   store.commit('toggleIsPlaying',{ isPlaying: false })
 })
 
 Vue.prototype.$audio = audio
-
+//vuex管理播放器展示的信息等状态
 const store = new Vuex.Store({
   state: {
     isPlaying: false,

@@ -26,7 +26,7 @@ const voicesInfo = [{
     {
         voiceName:'Brave Song',
         path:'Brave Song.mp3',
-        tag:'灭人器（谨慎使用，目前无法停止）'
+        tag:'灭人器'
     },
     {
         voiceName:'不给糖就捣蛋！',

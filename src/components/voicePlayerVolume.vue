@@ -42,7 +42,7 @@ export default {
       // console.log('volume: ' + this.$audio.volume)
       this.volume = volume;
       this.$audio.muted = false
-      this.mute = false
+      this.muted = false
     },
     toggleMute() {
       this.$audio.muted = !this.$audio.muted;
