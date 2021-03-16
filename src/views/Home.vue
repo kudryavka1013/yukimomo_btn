@@ -1,53 +1,60 @@
 <template>
-  <div>
-    <div class="ma-3">
-      <introduction />
-      <v-alert
-        class="mt-3"
-        dense
-        rounded="lg"
-        tran
-        transition="scroll-x-transition"
-        border="left"
-        colored-border
-        type="info"
-        color="primary"
-        elevation="2"
-        dismissible
-      >
-        音量注意！由于点击按钮引发的包括耳膜破损在内的各种后果本站概不负责！
-      </v-alert>
-      <v-alert
-        class="mt-3"
-        dense
-        rounded="lg"
-        tran
-        transition="scroll-x-transition"
-        border="left"
-        colored-border
-        type="info"
-        color="primary"
-        elevation="2"
-        dismissible
-      >
-        手机端适配尚未完成，最好用电脑网页打开
-      </v-alert>
-    </div>
-    <div class="ma-3">
-      <v-row>
-        <v-col v-for="item in voicesGroup" :key="item.tag" cols="12">
-          <voice-card rounded="lg" :title="item.tag">
-            <voice-button
-              v-for="(i, index) in item.childs"
-              :key="index"
-              :voiceName="i.voiceName"
-              :path="i.path"
-            />
-          </voice-card>
-        </v-col>
-      </v-row>
-    </div>
-    <voice-player class="player"/>
+  <div class="cyan lighten-5">
+    <!-- <v-parallax
+      src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+    > -->
+      <div class="ma-3 mt-0 pt-3">
+        <introduction />
+        <v-alert
+          class="mt-3"
+          dense
+          rounded="lg"
+          tran
+          transition="scroll-x-transition"
+          border="left"
+          colored-border
+          type="info"
+          color="primary"
+          elevation="2"
+          dismissible
+        >
+          音量注意！由于点击按钮引发的包括耳膜破损在内的各种后果本站概不负责！
+        </v-alert>
+        <v-alert
+          class="mt-3"
+          dense
+          rounded="lg"
+          tran
+          transition="scroll-x-transition"
+          border="left"
+          colored-border
+          type="info"
+          color="primary"
+          elevation="2"
+          dismissible
+        >
+          手机端适配尚未完成，最好用电脑网页打开
+        </v-alert>
+      </div>
+
+      <div class="ma-3">
+        <voice-card
+        class="mb-3"
+          rounded="lg"
+          :title="item.tag"
+          v-for="item in voicesGroup"
+          :key="item.tag"
+        >
+          <voice-button
+            v-for="(i, index) in item.childs"
+            :key="index"
+            :voiceName="i.voiceName"
+            :path="i.path"
+          />
+        </voice-card>
+      </div>
+    <!-- </v-parallax> -->
+    <voice-player class="player" />
   </div>
 </template>
 

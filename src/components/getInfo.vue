@@ -9,7 +9,7 @@
         这里是阿桃介绍，阿巴阿巴
       </v-card-text>
     </v-card>
-    <v-card width="auto" rounded="lg" :loading="isLoading">
+    <v-card width="auto" rounded="lg" :loading="isLoading" hover>
       <v-card-title class="blue white--text">
         <v-icon medium left class="white--text">mdi-clock-outline</v-icon>
         直播动态

@@ -6,7 +6,9 @@
       <v-slide-x-transition mode="out-in" appear>
         <!-- 主页面 -->
         <keep-alive>
+          
           <router-view></router-view>
+          
         </keep-alive>
       </v-slide-x-transition>
       <!-- 返回顶部按钮 -->
