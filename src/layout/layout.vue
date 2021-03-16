@@ -1,29 +1,22 @@
 <template>
   <div>
     <!-- 侧边导航栏 -->
-    <v-navigation-drawer v-model="drawer" app color="cyan lighten-5">
+    <v-navigation-drawer v-model="drawer" app color="cyan lighten-4">
       <v-list dense nav>
         <v-subheader>这里是导航，妙啊！</v-subheader>
-        <v-list-item-group mandatory color="cyan">
-          <v-list-item :to="{ name: 'home' }">
+        <v-list-item-group
+          mandatory
+          color="cyan darken-3"
+        >
+          <v-list-item
+            :to="item.route"
+            v-for="(item, i) in navigation"
+            :key="i"
+          >
             <v-list-item-icon>
-              <v-icon>mdi-home</v-icon>
+              <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>主页</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item :to="{ name: 'bilibili' }">
-            <v-list-item-icon>
-              <v-icon>mdi-web</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>哔哩哔哩</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item :to="{ name: 'about' }">
-            <v-list-item-icon>
-              <v-icon>mdi-code-tags</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>关于</v-list-item-title>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -52,10 +45,12 @@
 </template>
 
 <script>
+import navigation from "../config/navigation";
 export default {
   name: "layout",
   data: () => ({
     drawer: null,
+    navigation: navigation,
   }),
 };
 </script>

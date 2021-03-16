@@ -2,20 +2,26 @@ import VueRouter from 'vue-router'
 
 import Home from '../views/Home'
 import About from '../views/About'
-import Bilibili from '../views/Bilibili'
+import Dynamic from '../views/Dynamic'
+import Timeline from '../views/Timeline'
 const routes = [{
-        name:'home',
+        name: 'home',
         path: '/home',
         component: Home
     }, {
-        name:'bilibili',
-        path: '/bilibili',
-        component: Bilibili
+        name: 'dynamic',
+        path: '/dynamic',
+        component: Dynamic
     },
     {
-        name:'about',
+        name: 'about',
         path: '/about',
         component: About
+    },
+    {
+        name:'timeline',
+        path:'/timeline',
+        component: Timeline
     }, {
         path: '*',
         redirect: 'home'

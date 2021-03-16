@@ -8,9 +8,10 @@
 <script>
 import getInfo from '../components/getInfo'
 export default {
-  name: "Bilibili",
+  name: "Dynamic",
   components:{
-    getInfo
+    getInfo,
+    
   }
 };
 </script>

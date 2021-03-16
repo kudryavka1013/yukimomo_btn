@@ -9,7 +9,7 @@
       <span>停止播放</span>
     </v-btn>
 
-    <v-btn rounded disabled v-on:click="randomAudio" class="ms-4 primary">
+    <v-btn rounded v-on:click="randomAudio" class="ms-4 primary">
       <v-icon>mdi-shuffle-variant</v-icon>
       <span>随机播放</span>
     </v-btn>
@@ -26,6 +26,7 @@
 <script>
 import VoicePlayerContent from "./voicePlayerContent.vue";
 import voicePlayerVolume from "./voicePlayerVolume.vue";
+import voicesInfo from '../config/voicesInfo'
 export default {
   components: { voicePlayerVolume, VoicePlayerContent },
   name: "voicePlayer",
@@ -56,7 +57,20 @@ export default {
       console.log("pause audio");
     },
     randomAudio: function () {
-      // this.$audio.
+      var rn = Math.floor(Math.random() * voicesInfo.length);
+      var path = voicesInfo[rn].path
+      var voiceName = voicesInfo[rn].voiceName
+      this.$audio.src = require("../../public/voices/" + path);
+      console.log(voiceName)
+      // this.$audio.preload = "metadata";
+      // console.log(this.$audio);
+      // console.log(this.$audio.preload)
+      // console.log(this.$audio.volume)
+      this.$audio.load();
+      this.$audio.oncanplay = function () {};
+      this.$store.commit('toggleIsPlaying',{ isPlaying: true })
+      this.$store.commit('changeContent',{ content: voiceName })
+      this.$audio.play();
     },
     loopAudio: function () {
       this.$audio.loop = !this.$audio.loop;
